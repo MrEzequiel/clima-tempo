@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Saira:ital,wght@0,100;0,400;0,500;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Buscar Clima</title>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1>CLIMATEMPO</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#search">Pesquisar</a></li>
+          <li><a href="#climates">Climas</a></li>
+          <li><a href="#about-us">Sobre Mim</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="search">
+        <h2>Buscar clima:</h2>
+        <form class="search">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Digite o nome de sua cidade:"
+            autocomplete="off"
+          />
+          <button type="submit">
+            <span class="material-icons"> search </span>
+          </button>
+        </form>
+
+        <div class="result">
+          <div class="title">
+            <h2>Rio Branco, BR</h2>
+          </div>
+          <div class="info">
+            <div class="temperature">
+              <div class="temperature-title">Temperatura</div>
+              <div class="temperature-info">16.63 <sup>ºC</sup></div>
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+            </div>
+            <div class="wind">
+              <div class="wind-title">Vento</div>
+              <div class="wind-info">4.12 <span>km/h</span></div>
+              <div class="wind-area">
+                <div class="wind-point" style="transform: rotate(0deg)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert">
+          <img src="./assets/loading.png" alt="carregando" />
+          <h2></h2>
+        </div>
+      </section>
+
+      <section id="climates"></section>
+    </main>
+
+    <footer id="about-us">
+      <div class="author">
+        <p>
+          Criado com 💜 por
+          <a href="https://github.com/MrEzequiel" target="_blank">Ezequiel</a>
+        </p>
+        <div class="networks">
+          <a href="https://github.com/MrEzequiel" target="_blank">
+            <img src="./assets/github.png" alt="github icone" />
+          </a>
+          <a href="https://www.instagram.com/ezequield3v/" target="_blank">
+            <img src="./assets/instagram.png" alt="instagram icone" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCkkSvYdYZq4F4nGvd4ec-kw"
+            target="_blank"
+          >
+            <img src="./assets/youtube.png" alt="youtube icone" />
+          </a>
+        </div>
+      </div>
+      <div class="credits">
+        <p>
+          API utilizada:
+          <a href="https://openweathermap.org" target="_blank">OpenWeather</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

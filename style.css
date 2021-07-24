@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Saira', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(0.7rem);
+  }
+  80% {
+    transform: translateX(-0.7rem);
+  }
+}
+
+@keyframes transparency {
+  0%,
+  20%,
+  60%,
+  100% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+}
+
+:root {
+  scroll-behavior: smooth;
+  font-size: 63.5%;
+}
+
+body {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #f6f6f6;
+  box-shadow: 0 0.1rem 0.8rem 0.2rem #00000038;
+  min-height: 9rem;
+
+  padding: 0 2.5rem;
+
+  transition: box-shadow 200ms;
+}
+
+header .title-header h1 {
+  font-weight: 400;
+  color: #3b1143;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  font-size: 2rem;
+  margin-right: 3rem;
+}
+
+header ul li a {
+  color: #4f0854;
+}
+
+header ul li:last-child {
+  margin-right: 0;
+}
+
+main {
+  padding: 0 2.5rem;
+}
+
+#search {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: #4d0955;
+  font-weight: 400;
+}
+
+#search > h2 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search input {
+  font-size: 2rem;
+  background: #6c2374;
+  color: white;
+
+  width: 30rem;
+  height: 4rem;
+  border-radius: 1rem 0 0 1rem;
+  padding: 1rem;
+}
+
+.search input::placeholder {
+  color: #ab74ad;
+}
+
+.search button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  background: #ab74ad;
+  color: white;
+
+  height: 4rem;
+  padding: 0 1rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.result {
+  background: #2e0237;
+  color: white;
+
+  border: 0.5rem solid #6c2374;
+  border-radius: 1rem;
+
+  width: min(30rem, 80%);
+  padding: 2rem 1rem;
+  text-align: center;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result .title {
+  margin-bottom: 2rem;
+}
+
+.result .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  font-size: 1.8rem;
+}
+
+.temperature .temperature-title,
+.wind .wind-title {
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.temperature .temperature-info,
+.wind .wind-info {
+  font-size: 3rem;
+}
+
+.wind-area {
+  width: 5rem;
+  height: 5rem;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+
+  margin: auto;
+  margin-top: 2.5rem;
+  padding-left: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.wind-point {
+  width: 1.5rem;
+  height: 0.1rem;
+  background-color: #fff;
+  transform-origin: left;
+}
+
+.alert {
+  display: none;
+}
+
+.alert.active img {
+  animation: bounce infinite 1s;
+  display: block;
+  margin: 0 auto;
+  width: 15rem;
+
+  transition: transform 200ms;
+}
+
+.alert.active h2 {
+  animation: transparency infinite 2s;
+}
+
+.alert.stop-animation h2,
+.alert.stop-animation img {
+  animation: none;
+}
+
+#climates {
+  background: #2e0237;
+  color: #fff;
+  margin: 0 -2.5rem;
+  padding: 5rem 0.5rem 5rem 2.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#climates .climate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 2rem 3.5rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+
+  background: #6c2374;
+  width: 20rem;
+
+  border: 0.1rem solid #fff;
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  transition: transform 250ms;
+}
+
+#climates .climate:hover {
+  transform: scale(1.15);
+}
+
+#climates .climate-info {
+  margin-top: 1rem;
+}
+
+footer {
+  min-height: 15rem;
+  box-shadow: inset 0 1rem 1.2rem -0.5rem #2e0237;
+  color: #2e0237;
+
+  font-size: 2rem;
+  padding: 2.5rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author a {
+  display: inline-block;
+  font-weight: 700;
+
+  transition: transform 250ms;
+}
+
+.author a:hover {
+  transform: translateY(-0.5rem);
+}
+
+.author .networks {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.author .networks a {
+  margin-right: 2rem;
+}
