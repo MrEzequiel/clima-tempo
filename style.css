@@ -59,6 +59,13 @@ input {
 
 /* GLOBAL  =========================*/
 :root {
+  /* COLORS */
+  --color-strong: #3b1143;
+  --color-strong-secondary: #2e0237;
+  --font-color1: #4f0854;
+  --color-clear: #6c2374;
+  --base-color: #ab74ad;
+
   scroll-behavior: smooth;
   font-size: 63.5%;
 }
@@ -85,7 +92,7 @@ header {
 
 header .title-header h1 {
   font-weight: 400;
-  color: #3b1143;
+  color: var(--color-strong);
 }
 
 header .menu {
@@ -95,7 +102,7 @@ header .menu {
 header .menu span {
   user-select: none;
 
-  color: #2e0237;
+  color: var(--color-strong-secondary);
   font-size: 4rem;
   cursor: pointer;
 }
@@ -157,14 +164,14 @@ header ul li:last-child {
 
 header ul li a {
   position: relative;
-  color: #4f0854;
+  color: var(--font-color1);
 }
 
 header ul li a::after {
   content: '';
   width: 0;
   height: 0.2rem;
-  background: #6c2374;
+  background: var(--color-clear);
 
   z-index: 2;
   position: absolute;
@@ -207,7 +214,7 @@ main {
 
 .search input {
   font-size: 2rem;
-  background: #6c2374;
+  background: var(--color-clear);
   color: white;
 
   width: 30rem;
@@ -217,7 +224,7 @@ main {
 }
 
 .search input::placeholder {
-  color: #ab74ad;
+  color: var(--base-color);
 }
 
 .search button {
@@ -225,19 +232,25 @@ main {
   display: flex;
   align-items: center;
 
-  background: #ab74ad;
+  background: var(--base-color);
   color: white;
 
   height: 4rem;
   padding: 0 1rem;
   border-radius: 0 1rem 1rem 0;
+
+  transition: background 250ms;
+}
+
+.search button:hover {
+  background: var(--color-clear);
 }
 
 .result {
-  background: #2e0237;
+  background: var(--color-strong-secondary);
   color: white;
 
-  border: 0.5rem solid #6c2374;
+  border: 0.5rem solid var(--color-clear);
   border-radius: 1rem;
 
   width: min(30rem, 80%);
@@ -313,7 +326,7 @@ main {
 }
 
 #climates {
-  background: #2e0237;
+  background: var(--color-strong-secondary);
   color: #fff;
   margin: 0 -2.5rem;
   padding: 5rem 0.5rem 5rem 2.5rem;
@@ -332,7 +345,7 @@ main {
   text-align: center;
   font-size: 2.5rem;
 
-  background: #6c2374;
+  background: var(--color-clear);
   width: 20rem;
 
   border: 0.1rem solid #fff;
@@ -353,8 +366,8 @@ main {
 
 footer {
   min-height: 15rem;
-  box-shadow: inset 0 1rem 1.2rem -0.5rem #2e0237;
-  color: #2e0237;
+  box-shadow: inset 0 1rem 1.2rem -0.5rem var(--color-strong-secondary);
+  color: var(--color-strong-secondary);
 
   font-size: 2rem;
   padding: 2.5rem 1rem;
