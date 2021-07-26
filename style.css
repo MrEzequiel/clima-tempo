@@ -1,3 +1,4 @@
+/* GLOBAL / RESET =========================*/
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +26,7 @@ input {
   border: none;
 }
 
+/* ANIMATION =========================*/
 @keyframes bounce {
   0%,
   20%,
@@ -55,6 +57,7 @@ input {
   }
 }
 
+/* GLOBAL  =========================*/
 :root {
   scroll-behavior: smooth;
   font-size: 63.5%;
@@ -65,6 +68,7 @@ body {
   font-size: 1.6rem;
 }
 
+/* HEADER =========================*/
 header {
   display: flex;
   justify-content: space-between;
@@ -84,6 +88,60 @@ header .title-header h1 {
   color: #3b1143;
 }
 
+header .menu {
+  display: none;
+}
+
+header .menu span {
+  user-select: none;
+
+  color: #2e0237;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.menu .menu-active {
+  opacity: 0;
+  visibility: hidden;
+
+  background: #fff;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+
+  position: fixed;
+  top: -20rem;
+  left: 0;
+
+  transition: top 250ms;
+}
+
+.menu .menu-active ul {
+  display: grid;
+  gap: 5rem;
+}
+
+.menu .menu-active ul li {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
+
+.menu .menu-active span {
+  user-select: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.menu .menu-active.active {
+  opacity: 1;
+  visibility: visible;
+
+  top: 0;
+}
+
 header ul {
   display: flex;
 }
@@ -93,14 +151,34 @@ header ul li {
   margin-right: 3rem;
 }
 
-header ul li a {
-  color: #4f0854;
-}
-
 header ul li:last-child {
   margin-right: 0;
 }
 
+header ul li a {
+  position: relative;
+  color: #4f0854;
+}
+
+header ul li a::after {
+  content: '';
+  width: 0;
+  height: 0.2rem;
+  background: #6c2374;
+
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  bottom: -0.75rem;
+
+  transition: width 250ms;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+/* MAIN =========================*/
 main {
   padding: 0 2.5rem;
 }
@@ -282,6 +360,7 @@ footer {
   padding: 2.5rem 1rem;
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -304,4 +383,26 @@ footer {
 
 .author .networks a {
   margin-right: 2rem;
+}
+
+@media (max-width: 650px) {
+  header nav {
+    display: none;
+  }
+
+  header .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  #climates {
+    justify-content: center;
+  }
+  footer {
+    justify-content: center;
+  }
+  footer .credits {
+    margin-top: 2.5rem;
+  }
 }

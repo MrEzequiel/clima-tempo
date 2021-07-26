@@ -27,8 +27,12 @@ async function createCard(city) {
   card.innerHTML = `
   <div class="climate-temp">
     <div class="climate-title">${atributes.name}, ${atributes.sys.country}</div>
-    <div class="climate-info">${atributes.main.temp} <sup>ºC</sup></div>
-    <img src="http://openweathermap.org/img/wn/${atributes.weather[0].icon}@2x.png" />
+    <div class="climate-info">${Math.round(
+      atributes.main.temp
+    )} <sup>ºC</sup></div>
+    <img src="http://openweathermap.org/img/wn/${
+      atributes.weather[0].icon
+    }@2x.png" />
   </div>
   `
   let climates = document.querySelector('#climates')
@@ -125,3 +129,17 @@ function showWarning(msg) {
     clearWarnings()
   }
 }
+
+function menuClose() {
+  document.querySelector('.menu-active').classList.remove('active')
+}
+
+document.querySelector('.menu span').addEventListener('click', () => {
+  document.querySelector('.menu-active').classList.add('active')
+})
+
+document.querySelector('.menu-active span').addEventListener('click', menuClose)
+
+document.querySelectorAll('.menu-active li').forEach(list => {
+  list.addEventListener('click', menuClose)
+})
