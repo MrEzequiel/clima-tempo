@@ -1,17 +1,41 @@
-# Clima Tempo
+<h1 align="center">CLIMATEMPO</h1>
 
-Uma aplicação front-end HTML, CSS e JS. Para requisição de cidade específica requerida pelo o usuário.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-api">API</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-autor">Autor</a>&nbsp;&nbsp;&nbsp;
+</p>
 
-## Fontes e icons
+<br>
 
-Ícones e fontes usados do google fonts.
+<p align="center">
+  <img alt="Rocket.Q" src="./assets/page-readme.png" width="100%">
+</p>
 
-```bash
-https://fonts.google.com
-```
+## 🚀 Tecnologias
 
-## API
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-API utilizada para requisições:
+- HTML
+- CSS
+- JavaScript
 
-[OpenWeather](https://openweathermap.org)
+## 💻 Projeto
+
+Projeto desenvolvido por mim para treinar criação de elementos dinâmicos e requisições a api externas.
+
+## 🖥️ API
+
+A api utilizada ma aplicação é: [OpenWeather](https://openweathermap.org)
+
+## 🔖 Autor
+
+- Github: <a href="https://github.com/">MrEzequiel
+  </a>
+- Instagram: <a href="https://www.instagram.com/ezequield3v/">@ezequield3v</a>
+
+<hr>
+<br>
+
+Feito com 💜 by Ezequiel
